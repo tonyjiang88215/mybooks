@@ -1,4 +1,4 @@
-# 读取相册API `chanjet-plgin-take-photo`
+# 读取相册API `chanjet-plgin-take-photo`
 
 提供从相册中选择照片的功能 , 目前支持chanjet平台, 后期增加微信.
 
