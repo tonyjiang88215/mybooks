@@ -13,7 +13,7 @@ Chanjet-UI
 
 
 #### Native插件
-[Chanjet-Plugin](chanjet-ui/index.html)
+[Chanjet-Plugin](chanjet-plugin/index.html)
 
 #### Chanjet平台401拦截器
 [Ajax-Interceptor](ajax-interceptor/Ajax-Interceptor.html)
