@@ -1,4 +1,4 @@
 # 开发文档
 
 
-[mutants](mutants.html)
+[mutants](mutants/mutants.html)
