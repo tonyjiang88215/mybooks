@@ -16,4 +16,4 @@ Chanjet-UI
 Chanjet-Plugin
 
 #### Chanjet平台401拦截器
-Ajax-Interceptor
+[Ajax-Interceptor](ajax-interceptor/Ajax-Interceptor.html)
