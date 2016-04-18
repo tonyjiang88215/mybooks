@@ -1,3 +1,3 @@
 # Chanjet-Plugin
 
-[设计思路](概述/概述.html)
+[设计思路](Chanjet-Plugin.html)
