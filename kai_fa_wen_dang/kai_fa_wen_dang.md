@@ -2,14 +2,14 @@
 <br/>
 
 #### 前端框架入口
-[mutants](mutants/mutants.html)
+[Mutants](mutants/mutants.html)
 
 #### 前端核心库 
 JS-SDK
 
 
 #### 前端组件库
-chanjet-ui
+Chanjet-UI
 
 
 #### 前端Native插件
