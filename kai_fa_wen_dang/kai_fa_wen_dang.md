@@ -13,4 +13,4 @@ Chanjet-UI
 
 
 #### 前端Native插件
-chanjet-plugin
+Chanjet-Plugin
