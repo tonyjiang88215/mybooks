@@ -15,3 +15,5 @@ Chanjet-UI
 #### Native插件
 Chanjet-Plugin
 
+#### Chanjet平台401拦截器
+Ajax-Interceptor
