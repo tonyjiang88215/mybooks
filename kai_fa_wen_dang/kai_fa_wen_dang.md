@@ -1,5 +1,5 @@
 # 开发文档
 
 
-## [mutants](mutants/mutants.md)
+## [mutants](mutants)
 ## [Ajax-Interceptor](ajax-interceptor/Ajax-Interceptor.md)
