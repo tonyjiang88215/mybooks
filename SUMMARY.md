@@ -7,4 +7,5 @@
    * [chanjet-plugin](kai_fa_wen_dang/chanjet-plugin/README.md)
        * [概述](kai_fa_wen_dang/chanjet-plugin/Chanjet-Plugin.md)
        * [拍照](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-take-photo.md)
+       * 选图片
 
