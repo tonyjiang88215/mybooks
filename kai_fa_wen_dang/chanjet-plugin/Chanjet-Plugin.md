@@ -4,7 +4,7 @@
 
 
 
-![设计图例](img/mutants/Plugin.png)
+![设计图例](img/Plugin.png)
 
 
 
@@ -180,13 +180,13 @@ PluginMocker.data = mockData;
 
 
 
-# Chanjet-Plugin
+# Android-Restore
 
 为了解决安卓下调用插件导致进程被kill掉,在restore时无法获取callback的问题.
 
 
 
-![](img/mutants/Plugin Restore.png)
+![](img/Plugin Restore.png)
 
 插件可以分为上图四种.可以提取出两种属性,分别是 `hasProgress` 和 `hasJump`.
 
