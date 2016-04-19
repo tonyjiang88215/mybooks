@@ -24,9 +24,9 @@ plugin.takePhoto((rs) => {
    *  rs = {
    *		result : number,	//0:ok , 1:failed , 2:canceled
    *		message : string,	
+   *		requestId : string,
    *		body : {
-   *			data : Object,
-   *			requestId : string
+   *			data : Object
    *		}
    *  }
    */
