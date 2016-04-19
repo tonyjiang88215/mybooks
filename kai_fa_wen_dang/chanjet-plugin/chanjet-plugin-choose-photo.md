@@ -53,7 +53,7 @@ const requestId = 'choosePhotoAtDemoPage';
 const callback = (rs) => {
   /*
    *  rs = {
-   *		result : number,	//0:ok , 1:failed , 2:canceled
+   *		resultCode : number,	//0:ok , 1:failed , 2:canceled
    *		message : string,	
    *		requestId : string,
    *		body : {
@@ -63,12 +63,12 @@ const callback = (rs) => {
    */
 
   //调用成功
-  if(rs.result == 0){
+  if(rs.resultCode == 0){
 	//插入应用自己的代码
     console.log(rs.body);
 
   //调用失败
-  }else if(rs.result == 1){
+  }else if(rs.resultCode == 1){
   	//插入应用自己的代码
     console.log(rs.message);
 
@@ -91,3 +91,78 @@ const callback = (rs) => {
  */
 plugin.choosePhoto(options , callback , requestId);
 ```
+
+
+
+
+
+## mock数据
+
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+
+
+
+### 模拟成功
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  ChoosePhotoPlugin : {
+    status : 'success',
+    //data为数组,其中包含了选择照片返回的照片地址,可自行mock
+    data : ['http://www.example.com/1.png']
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+  
+  
+  
+```
+
+
+
+### 模拟失败
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  ChoosePhotoPlugin : {
+    status : 'failed',
+    message : 'choose photo has been failed'
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
+
+### 模拟取消
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  ChoosePhotoPlugin : {
+    status : 'cancel'
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
+
+
+
+
+
