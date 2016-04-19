@@ -93,3 +93,56 @@ const callback = (rs) => {
  */
 plugin.takePhoto(options , callback , requestId);
 ```
+
+
+
+
+## mock数据
+
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+
+
+
+### 模拟成功
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  TakePhotoPlugin : {
+    status : 'success',
+    //data为数组,其中包含了拍照返回的照片地址,可自行mock
+    data : ['http://www.example.com/1.png']
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+  
+  
+  
+```
+
+
+
+### 模拟失败
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  TakePhotoPlugin : {
+    status : 'failed',
+    //data为数组,其中包含了拍照返回的照片地址,可自行mock
+    data : ['http://www.example.com/1.png']
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
+
