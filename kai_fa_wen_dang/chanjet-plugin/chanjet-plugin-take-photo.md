@@ -135,14 +135,33 @@ const mockData = {
   //mock数据中,键名为插件的类名
   TakePhotoPlugin : {
     status : 'failed',
-    //data为数组,其中包含了拍照返回的照片地址,可自行mock
-    data : ['http://www.example.com/1.png']
+    message : 'take photo has been failed'
   }
 }
 
 //设置mock数据
 PluginMocker.data = mockData;
 ```
+
+
+
+### 模拟取消
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  TakePhotoPlugin : {
+    status : 'cancel'
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
 
 
 
