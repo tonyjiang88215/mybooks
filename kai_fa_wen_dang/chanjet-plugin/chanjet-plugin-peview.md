@@ -1,4 +1,4 @@
-# 预览API `chanjet-plugin-peview`
+#预览API `chanjet-plugin-peview`
 
 提供预览功能 , 目前提供图片预览, 后续可能支持其他文件预览.
 
