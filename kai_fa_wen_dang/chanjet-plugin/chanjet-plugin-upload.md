@@ -91,14 +91,12 @@ const callback = (rs) => {
 
 /**
  * 参数说明
- * @param options
- *      @property options.maxCount 最大选图数量, 默认9张
- *      @property options.quality 0:高质量(默认) , 1:中等质量 , 2:低质量
- * @param callback 执行完成后回调
+ * @param imgList {Array} 上传图片的集合
+ * @param callback {Function} 执行完成后回调
  * @param [requestId] 应用自己分配的值,用于在restore时判断数据来源进行后续操作.
  *
  */
-plugin.choosePhoto(options , callback , requestId);
+plugin.uploadImg(imgList , callback , requestId);
 ```
 
 
