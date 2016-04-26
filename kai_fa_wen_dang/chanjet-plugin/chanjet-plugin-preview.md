@@ -24,7 +24,7 @@ npm install chanjet-plugin-preview
 
    - options `Object` 设置选项
      - imgList `Array` 需要预览的图片集合
-     - firstIndex `number` 首先展示第几张图片, 默认值:0
+     - firstIndex `number` 首先展示第几张图片, 默认值:0
    - callback `function` 执行完成后回调
    - [requestId] `string` 应用自己定义的id , 用于在restore时判断使用 , 选填
 
