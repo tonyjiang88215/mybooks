@@ -12,4 +12,5 @@
        * [短信](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-sms.md)
        * [预览](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-preview.md)
        * [语音识别](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-speech-reco.md)
+       * 打电话
 
