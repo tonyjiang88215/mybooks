@@ -19,13 +19,19 @@ npm install chanjet-plugin-speech-reco
 
 3. #### cancel 取消当前正在进行的识别操作
 
-4. #### onStart 开始事件
 
-5. #### onSpeechStart 检测到开始说话事件
 
-6. #### onSpeechEnd 检测到说话完成事件
 
-7. #### onUpdateResult 动态更新识别内容
+
+## 事件
+
+1. #### onStart 开始事件
+
+2. #### onSpeechStart 检测到开始说话事件
+
+3. #### onSpeechEnd 检测到说话完成事件
+
+4. #### onUpdateResult 动态更新识别内容
 
    返回值
 
@@ -33,16 +39,16 @@ npm install chanjet-plugin-speech-reco
 
      - data `Array` 识别结果数组, 由识别结果组成, 识别结果是字符串类型.
 
-8. #### onFinish 识别完毕事件
+5. #### onFinish 识别完毕事件
 
    返回值
 
    - result `Object` 返回对象
      - data `Array` 识别结果数组, 由识别结果组成, 识别结果是字符串类型.
 
-9. #### onCancel 取消识别事件
+6. #### onCancel 取消识别事件
 
-10. #### onError 发生错误事件
+7. #### onError 发生错误事件
 
 
 ## 用法
@@ -94,7 +100,6 @@ plugin.stop();
 
 //取消识别
 plugin.cancel();
-
 ```
 
 
