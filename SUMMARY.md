@@ -6,7 +6,7 @@
    * [ajax-interceptor](kai_fa_wen_dang/ajax-interceptor/Ajax-Interceptor.md)
    * [chanjet-plugin](kai_fa_wen_dang/chanjet-plugin/README.md)
        * [概述](kai_fa_wen_dang/chanjet-plugin/Chanjet-Plugin.md)
-       * 企业配置
+       * [企业配置](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-auth.md)
        * [拍照](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-take-photo.md)
        * [读取相册](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-choose-photo.md)
        * [预览](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-preview.md)
