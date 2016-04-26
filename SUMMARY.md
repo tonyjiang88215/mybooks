@@ -9,8 +9,8 @@
        * [拍照](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-take-photo.md)
        * [读取相册](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-choose-photo.md)
        * [上传](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-upload.md)
+       * [电话](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-phone-call.md)
        * [短信](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-sms.md)
        * [预览](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-preview.md)
-       * [电话](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-phone-call.md)
        * [语音识别](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-speech-reco.md)
 
