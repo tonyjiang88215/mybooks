@@ -65,12 +65,12 @@ const callback = (rs) => {
 
 
   //调用成功
-  if(rs.result == 0){
+  if(rs.resultCode == 0){
 	//插入应用自己的代码
     console.log(rs.body);
 
   //调用失败
-  }else if(rs.result == 1){
+  }else if(rs.resultCode == 1){
   	//插入应用自己的代码
     console.log(rs.message);
 
