@@ -1,4 +1,4 @@
-# 读取短信API  `chanjet-plugin-sms`
+# 短信API  `chanjet-plugin-sms`
 
 提供读取短信的api , 只在chanjet平台上可用, 微信不提供此功能.
 
