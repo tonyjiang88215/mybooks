@@ -72,12 +72,89 @@ const options = {
   latitude : '',
   location : '',
   city : '',
-  
+
 };
 
 //调用查看附近
 this.geoPlugin.displayNearBy( options , (rs) => {
   console.log(rs);
 });
-
 ```
+
+
+
+## mock数据
+
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+
+
+
+### 模拟成功
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  GeoPlugin : {
+    //获取当前位置mock数据
+    getLocation : {
+      status : 'success',
+      data : {
+        accuracy: 29,
+        city: "010",
+        latitude: 40.067496,
+        location: "北京市海淀区永腾南路靠近用友软件园中区8D",
+        locationTimestamp: 1461722019140,
+        longitude: 116.236093
+      }
+    },
+    
+    //查看附近选择mock数据
+    displayNearBy : {
+      status : 'success',
+      data : {
+        accuracy: 0,
+        city: "010",
+        latitude: 40.066948,
+        location: "北京久瑞医疗科技有限公司",
+        locationTimestamp: 1461722134777,
+        longitude: 116.235596
+      }
+    }
+    
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
+
+### 模拟失败
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  GeoPlugin : {
+    getLocation : {
+      status : 'failed',
+      message : '网络异常,请稍后再试'
+    },
+    displayNearBy : {
+      status : 'failed',
+      message : '网络异常,请稍后再试'
+    }
+  }
+
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
+
