@@ -100,6 +100,7 @@ plugin.stop();
 
 //取消识别
 plugin.cancel();
+
 ```
 
 
@@ -117,16 +118,22 @@ plugin.cancel();
 ```javascript
 import {PluginMocker} from 'chanjet-plugin-base';
 
+/**
+语音识别的mock比较特殊,由于存在过程,所以可以模拟用户说话的时间, 当用户点击停止时,还是会根据status进行返回结果.
+**/
+
 const mockData = {
   //mock数据中,键名为插件的类名
-SpeechRecoPlugin : {
+  SpeechRecoPlugin : {
     status : 'success',
+	//模拟说话的时间,默认3000ms
+    time : 1000,
+    //模拟识别结果
+    data : ['模拟语音识别结果','摸你余音识别机俄国','摸你依云识别结果']
   }
-}
 
 //设置mock数据
 PluginMocker.data = mockData;
-
 
 ```
 
@@ -141,6 +148,9 @@ const mockData = {
   //mock数据中,键名为插件的类名
   SpeechRecoPlugin : {
     status : 'failed',
+    //模拟说话的时间,默认3000ms
+    time : 1000,
+    message : '语音识别失败'
   }
 }
 
