@@ -51,3 +51,57 @@ plugin.call(phoneNo , phoneCallCallback);
 
 ```
 
+
+
+## mock数据
+
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+
+
+
+### 模拟成功
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  PhoneCallPlugin: {
+    //打电话
+    call: {
+      status: 'success'
+    }
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+
+```
+
+
+
+### 模拟失败
+
+```javascript
+import {PluginMocker} from 'chanjet-plugin-base';
+
+const mockData = {
+  //mock数据中,键名为插件的类名
+  PhoneCallPlugin: {
+    //打电话
+    call: {
+      status: 'failed',
+      message : '没有权限'
+    }
+  }
+}
+
+//设置mock数据
+PluginMocker.data = mockData;
+```
+
+
+
+
+
