@@ -68,19 +68,19 @@ mutants封装了chanjet-env-check对象,可以快速获取当前环境,无需在
 */
 
 //当前平台
-console.log(mutants.platform);
+console.log(mutants.env.platform);
 //当前系统或设备
-console.log(mutants.os);
+console.log(mutants.env.os);
 //当前浏览器
-console.log(mutants.browser);
+console.log(mutants.env.browser);
 
 //可以通过constant来判断
 
 //判断是否是chanjet平台
-mutants.platform == mutants.constant.platform.chanjet
+mutants.env.platform == mutants.constant.platform.chanjet
 //判断是否是ios操作系统
-mutants.os == mutants.constant.os.ios
+mutants.env.os == mutants.constant.os.ios
 //判断是否是chrome浏览器
-mutants.browser == mutants.constant.browser.chrome
+mutants.env.browser == mutants.constant.browser.chrome
 ```
 
