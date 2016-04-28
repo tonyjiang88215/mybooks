@@ -50,12 +50,12 @@ let plugin = new PreviewPlugin();
 
 //定义调用参数
 const options = {
-    imgList : [
-      'http://img4.imgtn.bdimg.com/it/u=2134987970,41197490&fm=21&gp=0.jpg' ,
-      'http://bbs.zgwg.com.cn/UploadFile/2009-4/200941820512789561.jpg'
-    ],
-    firstIndex : 0,
-  	canDelete : 1
+   imgList : [
+     'http://img4.imgtn.bdimg.com/it/u=2134987970,41197490&fm=21&gp=0.jpg' ,
+     'http://bbs.zgwg.com.cn/UploadFile/2009-4/200941820512789561.jpg'
+   ],
+   firstIndex : 0,
+   canDelete : 1
   
 };
 
