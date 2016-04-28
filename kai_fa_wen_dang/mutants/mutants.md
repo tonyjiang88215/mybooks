@@ -81,15 +81,15 @@ mutants.env.browser == mutants.constant.browser.chrome
 | API                              | Native能力               | 文档                                    |
 | -------------------------------- | ---------------------- | ------------------------------------- |
 | mutants.plugin.**auth**          | 企业信息及权限相关              | [去看看](../chanjet-plugin/chanjet-plugin-auth.md)         |
-| mutants.plugin.**choosePhoto**   | 读取相册选照片                | [去看看](chanjet-plugin-choose-photo.md) |
-| mutants.plugin.**takePhoto**     | 拍照                     | [去看看](chanjet-plugin-take-photo.md)   |
-| mutants.plugin.**preview**       | 预览                     | [去看看](chanjet-plugin-preview.md)      |
-| mutants.plugin.**upload**        | 上传                     | [去看看](chanjet-plugin-upload.md)       |
-| mutants.plugin.**geo**           | 定位                     | [去看看](chanjet-plugin-geo.md)          |
-| mutants.plugin.**phone**         | 电话                     | [去看看](chanjet-plugin-phone-call.md)   |
-| mutants.plugin.**sms**           | 短信                     | [去看看](chanjet-plugin-sms.md)          |
-| mutants.plugin.**share**         | 分享                     | [去看看](chanjet-plugin-share.md)        |
-| mutants.plugin.**speechReco**    | 语音识别                   | [去看看](chanjet-plugin-speech-reco.md)  |
+| mutants.plugin.**choosePhoto**   | 读取相册选照片                | [去看看](../chanjet-plugin/chanjet-plugin-choose-photo.md) |
+| mutants.plugin.**takePhoto**     | 拍照                     | [去看看](../chanjet-plugin/chanjet-plugin-take-photo.md)   |
+| mutants.plugin.**preview**       | 预览                     | [去看看](../chanjet-plugin/chanjet-plugin-preview.md)      |
+| mutants.plugin.**upload**        | 上传                     | [去看看](../chanjet-plugin/chanjet-plugin-upload.md)       |
+| mutants.plugin.**geo**           | 定位                     | [去看看](../chanjet-plugin/chanjet-plugin-geo.md)          |
+| mutants.plugin.**phone**         | 电话                     | [去看看](../chanjet-plugin/chanjet-plugin-phone-call.md)   |
+| mutants.plugin.**sms**           | 短信                     | [去看看](../chanjet-plugin/chanjet-plugin-sms.md)          |
+| mutants.plugin.**share**         | 分享                     | [去看看](../chanjet-plugin/chanjet-plugin-share.md)        |
+| mutants.plugin.**speechReco**    | 语音识别                   | [去看看](../chanjet-plugin/chanjet-plugin-speech-reco.md)  |
 | mutants.plugin.**restoreStatus** | 安卓restore状态查询(Private) |                                       |
 
 
