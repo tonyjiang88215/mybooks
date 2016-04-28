@@ -80,7 +80,7 @@ mutants.env.browser == mutants.constant.browser.chrome
 
 | API                              | Native能力               | 文档                                    |
 | -------------------------------- | ---------------------- | ------------------------------------- |
-| mutants.plugin.**auth**          | 企业信息及权限相关              | [去看看](../chanjet-plugin/chanjet-plugin-auth.html)         |
+| mutants.plugin.**auth**          | 企业信息及权限相关              | [去看看](../chanjet-plugin/chanjet-plugin-auth.md)         |
 | mutants.plugin.**choosePhoto**   | 读取相册选照片                | [去看看](chanjet-plugin-choose-photo.md) |
 | mutants.plugin.**takePhoto**     | 拍照                     | [去看看](chanjet-plugin-take-photo.md)   |
 | mutants.plugin.**preview**       | 预览                     | [去看看](chanjet-plugin-preview.md)      |
