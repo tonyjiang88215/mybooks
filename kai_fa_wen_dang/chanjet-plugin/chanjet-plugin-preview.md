@@ -1,4 +1,4 @@
-#预览API `chanjet-plugin-peview`
+# 预览API `chanjet-plugin-peview`
 
 提供预览功能 , 目前提供图片预览, 后续可能支持其他文件预览.
 
@@ -24,9 +24,18 @@ npm install chanjet-plugin-preview
 
    - options `Object` 设置选项
      - imgList `Array` 需要预览的图片集合
-     - firstIndex `number` 首先展示第几张图片, 默认值:0
+     - firstIndex `number` 首先展示第几张图片, 默认值:0
+     - canDelete `Boolean` 是否可以在预览时删除图片, 默认值:false
    - callback `function` 执行完成后回调
    - [requestId] `string` 应用自己定义的id , 用于在restore时判断使用 , 选填
+
+   ##### 返回值
+
+   - result
+     - resultCode 操作结果 0:成功 , 1:失败
+     - message 消息
+     - body
+       - data 如果在预览时删除图片 , 这里会返回被删除的图片数据
 
 
 
@@ -41,11 +50,13 @@ let plugin = new PreviewPlugin();
 
 //定义调用参数
 const options = {
-   imgList : [
-     'http://img4.imgtn.bdimg.com/it/u=2134987970,41197490&fm=21&gp=0.jpg' ,
-     'http://bbs.zgwg.com.cn/UploadFile/2009-4/200941820512789561.jpg'
-   ],
-   firstIndex : 0
+    imgList : [
+      'http://img4.imgtn.bdimg.com/it/u=2134987970,41197490&fm=21&gp=0.jpg' ,
+      'http://bbs.zgwg.com.cn/UploadFile/2009-4/200941820512789561.jpg'
+    ],
+    firstIndex : 0,
+  	canDelete : 1
+  
 };
 
 
