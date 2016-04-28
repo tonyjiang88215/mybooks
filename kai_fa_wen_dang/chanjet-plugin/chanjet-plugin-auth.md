@@ -117,8 +117,6 @@ this.authPlugin.getAuthCode( (rs) => {
 
 
 
-
-
 ## mock数据
 
 在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
@@ -158,7 +156,14 @@ const mockData = {
                 "ext": null,
                 "page": "home",
                 "params": {"id": null},
-                "platformExtension": null,
+                "platformExtension": {
+                  	"ciaAppId": 7,// cia应用ID
+                  	"startTimestamp": 1457280000000,// 超始时间戳 unix时间戳
+                  	"subscribeType": 1,// 应用开通方式，1：付费开通，2：试用开通；
+                  	"endTimestamp": 1488816000000,// 结束时间戳 unix时间戳
+                  	"domain": "http://ul0r6mvjo1hr.chanapp.com/",// 虚机域名
+                  	"orgAccount": "ul0r6mvjo1hr"// 虚机账号
+    			},
                 "tab": "0",
                 "userAvatar": "https://www.example.com/user/head/pic.png",
                 "userName": "user_name",
