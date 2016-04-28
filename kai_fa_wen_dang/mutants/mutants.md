@@ -80,16 +80,16 @@ mutants.env.browser == mutants.constant.browser.chrome
 
 | API                              | Native能力               | 文档                                    |
 | -------------------------------- | ---------------------- | ------------------------------------- |
-| mutants.plugin.**auth**          | 企业信息及权限相关              | [去看看](../chanjet-plugin/chanjet-plugin-auth.md)         |
-| mutants.plugin.**choosePhoto**   | 读取相册选照片                | [去看看](../chanjet-plugin/chanjet-plugin-choose-photo.md) |
-| mutants.plugin.**takePhoto**     | 拍照                     | [去看看](../chanjet-plugin/chanjet-plugin-take-photo.md)   |
-| mutants.plugin.**preview**       | 预览                     | [去看看](../chanjet-plugin/chanjet-plugin-preview.md)      |
-| mutants.plugin.**upload**        | 上传                     | [去看看](../chanjet-plugin/chanjet-plugin-upload.md)       |
-| mutants.plugin.**geo**           | 定位                     | [去看看](../chanjet-plugin/chanjet-plugin-geo.md)          |
-| mutants.plugin.**phone**         | 电话                     | [去看看](../chanjet-plugin/chanjet-plugin-phone-call.md)   |
-| mutants.plugin.**sms**           | 短信                     | [去看看](../chanjet-plugin/chanjet-plugin-sms.md)          |
-| mutants.plugin.**share**         | 分享                     | [去看看](../chanjet-plugin/chanjet-plugin-share.md)        |
-| mutants.plugin.**speechReco**    | 语音识别                   | [去看看](../chanjet-plugin/chanjet-plugin-speech-reco.md)  |
+| mutants.plugin.**auth**          | 企业信息及权限相关              | [去看看](chanjet-plugin-auth.md)         |
+| mutants.plugin.**choosePhoto**   | 读取相册选照片                | [去看看](chanjet-plugin-choose-photo.md) |
+| mutants.plugin.**takePhoto**     | 拍照                     | [去看看](chanjet-plugin-take-photo.md)   |
+| mutants.plugin.**preview**       | 预览                     | [去看看](chanjet-plugin-preview.md)      |
+| mutants.plugin.**upload**        | 上传                     | [去看看](chanjet-plugin-upload.md)       |
+| mutants.plugin.**geo**           | 定位                     | [去看看](chanjet-plugin-geo.md)          |
+| mutants.plugin.**phone**         | 电话                     | [去看看](chanjet-plugin-phone-call.md)   |
+| mutants.plugin.**sms**           | 短信                     | [去看看](chanjet-plugin-sms.md)          |
+| mutants.plugin.**share**         | 分享                     | [去看看](chanjet-plugin-share.md)        |
+| mutants.plugin.**speechReco**    | 语音识别                   | [去看看](chanjet-plugin-speech-reco.md)  |
 | mutants.plugin.**restoreStatus** | 安卓restore状态查询(Private) |                                       |
 
 
@@ -97,6 +97,44 @@ mutants.env.browser == mutants.constant.browser.chrome
 **所有插件的方法, 都可以在对应的 `mutants.plugin[pluginName]` 上直接使用.**
 
 为了兼容好会计之前的调用方式, 每一个插件的包依旧支持独立使用 , 等好会计调整过后. 将不再提供.
+
+
+
+## Mock
+
+在开发过程中, 可以在浏览器环境中 , 使用 `mock` 数据来模拟Native能力的调用返回. 上表中 , 详细文档中会有每个插件的 `mock` 数据格式 . 
+
+通过 `mutants.plugin.setMockData` 可以进行 `mock` 数据的绑定.
+
+以 `choosePhoto` 为例:
+
+```javascript
+import mutants from 'chanjet-mutants'
+
+const mockData = {
+  //读取相册成功
+  ChoosePhotoPlugin: {
+    status: 'success',
+    //替换成自己想显示的图片
+    data: ['http://www.example.com/example.png']
+  },
+};
+
+//设置mock数据
+mutants.plugin.setMockData(mockData);
+
+
+//详细文档参见ChoosePhotoPlugin文档
+const choosePhotoOptions = {
+  maxCount : 2,
+  quality : 0
+};
+mutants.plugin.choosePhoto.choosePhoto(choosePhotoOpitons , (rs) => {
+  //rs.body.data 中得数据 应该是mockData中所设置的
+  console.log(rs);
+});
+
+```
 
 
 
