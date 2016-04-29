@@ -31,7 +31,7 @@ npm install chanjet-plugin-geo
    }
    ```
 
-2. #### displayNearBy 根据位置显示周边
+2. #### displayNearby 根据位置显示周边
 
    ##### 参数
 
@@ -76,7 +76,7 @@ const options = {
 };
 
 //调用查看附近
-this.geoPlugin.displayNearBy( options , (rs) => {
+this.geoPlugin.displayNearby( options , (rs) => {
   console.log(rs);
 });
 ```
@@ -111,7 +111,7 @@ const mockData = {
     },
     
     //查看附近选择mock数据
-    displayNearBy : {
+    displayNearby : {
       status : 'success',
       data : {
         accuracy: 0,
@@ -144,7 +144,7 @@ const mockData = {
       status : 'failed',
       message : '网络异常,请稍后再试'
     },
-    displayNearBy : {
+    displayNearby : {
       status : 'failed',
       message : '网络异常,请稍后再试'
     }
