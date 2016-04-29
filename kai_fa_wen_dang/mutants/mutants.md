@@ -1,4 +1,4 @@
-# Chanjet-Mutants `v0.0.5`
+# Chanjet-Mutants `v0.0.10`
 
 作为Mutants框架的入口,提供以下功能:
 
@@ -96,7 +96,7 @@ mutants.env.browser == mutants.constant.browser.chrome
 
 **所有插件的方法, 都可以在对应的 `mutants.plugin[pluginName]` 上直接使用.**
 
-为了兼容好会计之前的调用方式, 每一个插件的包依旧支持独立使用 , 等好会计调整过后. 将不再提供.
+为了兼容好会计之前的调用方式, 每一个插件的包依旧支持独立使用
 
 
 
