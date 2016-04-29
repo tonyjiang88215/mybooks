@@ -96,7 +96,7 @@ mutants.env.browser == mutants.constant.browser.chrome
 
 **所有插件的方法, 都可以在对应的 `mutants.plugin[pluginName]` 上直接使用.**
 
-为了兼容好会计之前的调用方式, 每一个插件的包依旧支持独立使用
+为了兼容好会计之前的调用方式, 每一个插件的包依旧支持独立使用.
 
 
 
