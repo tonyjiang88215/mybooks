@@ -44,13 +44,13 @@ mutants.ready( () => {
 
 ## 环境检测
 
-在 `mutants` 提供环境检测之前 , 环境检测是有 `chanjet-env-check` 这个包来完成的. 现在 `mutants` 中已经整合了环境检测 , 也是使用 `chanjet-env-check` , 挂载在 `mutants.env` 对象上. 
+在 `mutants` 提供环境检测之前 , 环境检测是由 `chanjet-env-check` 这个包来完成的. 现在 `mutants` 中已经整合了环境检测 , 也是使用 `chanjet-env-check` , 挂载在 `mutants.env` 对象上. 
 
 ```javascript
 import mutants from 'chanjet-mutants'
 
 /*
-mutants封装了chanjet-env-check对象,可以快速获取当前环境,无需在引入chanjet-env-check包,详见接口文档
+*mutants封装了chanjet-env-check对象,可以快速获取当前环境,无需在引入chanjet-env-check包,详见接口文档
 */
 
 //当前平台
