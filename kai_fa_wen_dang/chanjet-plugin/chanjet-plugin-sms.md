@@ -1,14 +1,19 @@
-# 读取短信API  `chanjet-plugin-sms`
+# 短信API  `chanjet-plugin-sms`
 
-提供读取短信的api , 只在chanjet平台上可用, 微信不提供此功能.
+在mutants框架中,  提供读取短信的api , 只在chanjet平台上可用, 微信不提供此功能.
+
+**不能脱离mutants框架单独使用.**
 
 
 
-### 安装
+## 获取实例
 
-``` 
-npm install chanjet-plugin-sms
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.sms;
 ```
+
+
 
 
 
@@ -49,11 +54,9 @@ npm install chanjet-plugin-sms
 ## 用法
 
 ``` javascript
-//加载插件
-import SMSPlugin from 'chanjet-plugin-sms'
+//获取插件实例
+const plugin = mutants.plugin.sms;
 
-//初始化  
-let plugin = new SMSPlugin();
 
 
 /************** 读取短信 **************/
@@ -103,3 +106,109 @@ const sendSMSCallback = (rs) => {
 //调用发送短信接口
 plugin.send(sendSMSOptions , sendSMSCallback)
 ```
+
+
+
+## mock数据
+
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `mutants.plugin.setMockData` 来设置mock数据.
+
+具体参考如下:
+
+
+
+
+
+### 模拟成功
+
+```javascript
+const mockData = {
+  //mock数据中,键名为插件的类名
+  SMSPlugin: {
+    //读取短信
+    read : {
+      status: "success",
+      data: [
+        {
+          "_id": 3333, //短消息序号
+          "thread_id": 0, //对话序号
+          "address": "15926306304", //发件人地址
+          "person": "henry", //发件人 返回一个数字就是联系人列表里的序号，陌生人为null
+          "date": new Date().getTime(), //日期 long
+          "protocol": 0, //协议 0 SMS_RPOTO, 1 MMS_PROTO
+          "read": 1, //是否阅读 0未读， 1已读
+          "status": 0, //状态 -1接收，0 complete, 64 pending, 128 failed
+          "type": 1, //类型 1是接收到的，2是已发出
+          "body": "", //消息内容
+          "service_center": "" //短信服务中心号码编号
+        },
+        {
+          "_id": 0, //短消息序号
+          "thread_id": 0, //对话序号
+          "address": "15926306304", //发件人地址
+          "person": "henry", //发件人 返回一个数字就是联系人列表里的序号，陌生人为null
+          "date": new Date().getTime(), //日期 long
+          "protocol": 0, //协议 0 SMS_RPOTO, 1 MMS_PROTO
+          "read": 1, //是否阅读 0未读， 1已读
+          "status": 0, //状态 -1接收，0 complete, 64 pending, 128 failed
+          "type": 1, //类型 1是接收到的，2是已发出
+          "body": "", //消息内容
+          "service_center": "" //短信服务中心号码编号
+        },
+        {
+          "_id": 0, //短消息序号
+          "thread_id": 0, //对话序号
+          "address": "15926306304", //发件人地址
+          "person": "henry", //发件人 返回一个数字就是联系人列表里的序号，陌生人为null
+          "date": new Date().getTime(), //日期 long
+          "protocol": 0, //协议 0 SMS_RPOTO, 1 MMS_PROTO
+          "read": 1, //是否阅读 0未读， 1已读
+          "status": 0, //状态 -1接收，0 complete, 64 pending, 128 failed
+          "type": 1, //类型 1是接收到的，2是已发出
+          "body": "", //消息内容
+          "service_center": "" //短信服务中心号码编号
+        }
+      ]
+    },
+
+    
+    //发送短信
+    send : {
+      status : 'success'
+    }
+    },
+}
+
+//设置mock数据
+mutants.plugin.setMockData(mockData);
+```
+
+
+
+### 模拟失败
+
+```javascript
+const mockData = {
+  //mock数据中,键名为插件的类名
+  SMSPlugin: {
+    //读取短信
+    read : {
+      status: "failed",
+      message : '读取失败'
+    },
+
+    
+    //发送短信
+    send : {
+      status : 'failed',
+      message : '没有权限'
+    }
+  }
+}
+
+//设置mock数据
+mutants.plugin.setMockData(mockData);
+```
+
+
+
