@@ -111,8 +111,6 @@ plugin.choosePhoto(options , callback , requestId);
 ### 模拟成功
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   ChoosePhotoPlugin : {
@@ -123,10 +121,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
-  
-  
-  
+mutants.plugin.setMockData(mockData);
 ```
 
 
