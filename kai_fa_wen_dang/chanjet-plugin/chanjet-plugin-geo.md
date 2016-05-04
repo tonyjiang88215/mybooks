@@ -1,14 +1,19 @@
 # 定位API  `chanjet-plugin-geo`
 
-提供定位相关的api , 只在chanjet平台上可用, 微信不提供此功能.
+在mutants框架中, 提供定位相关的api , 只在chanjet平台上可用, 微信不提供此功能.
+
+**不能脱离mutants框架单独使用.**
 
 
 
-### 安装
+## 获取实例
 
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.geo;
 ```
-npm install chanjet-plugin-geo
-```
+
+
 
 
 
@@ -50,16 +55,13 @@ npm install chanjet-plugin-geo
 ## 用法
 
 ```javascript
-//加载插件
-import GeoPlugin from 'chanjet-plugin-geo'
+//获取插件实例
+const plugin = mutants.plugin.geo;
 
-//初始化  
-let plugin = new GeoPlugin();
 
 
 /************** 获取当前位置 **************/
-
- this.geoPlugin.getLocation( (rs) => {
+plugin.getLocation( (rs) => {
    console.log(rs);
  });
 
@@ -76,7 +78,7 @@ const options = {
 };
 
 //调用查看附近
-this.geoPlugin.displayNearby( options , (rs) => {
+plugin.displayNearby( options , (rs) => {
   console.log(rs);
 });
 ```
