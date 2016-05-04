@@ -49,8 +49,9 @@ mutants.ready( () => {
 ```javascript
 import mutants from 'chanjet-mutants'
 
-//mutants封装了chanjet-env-check对象,可以快速获取当前环境,无需在引入chanjet-env-check包,详见接口文档
-
+/**
+mutants封装了chanjet-env-check对象,可以快速获取当前环境,无需在引入chanjet-env-check包,详见接口文档
+*/
 
 //当前平台
 console.log(mutants.env.platform);
