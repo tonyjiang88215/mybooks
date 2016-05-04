@@ -15,4 +15,5 @@
        * [短信](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-sms.md)
        * [上传](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-upload.md)
        * [语音识别](kai_fa_wen_dang/chanjet-plugin/chanjet-plugin-speech-reco.md)
+       * 分享
 
