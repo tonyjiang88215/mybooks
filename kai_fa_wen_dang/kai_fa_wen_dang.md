@@ -7,7 +7,7 @@
 JS-SDK
 
 
-#### 组件库
+#### UI组件库
 Chanjet-UI
 
 
