@@ -87,15 +87,15 @@ plugin.displayNearby( options , (rs) => {
 
 ## mock数据
 
-在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `mutants.plugin.setMockData` 来设置mock数据.
+
+具体参考如下:
 
 
 
 ### 模拟成功
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   GeoPlugin : {
@@ -129,7 +129,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
+mutants.plugin.setMockData(mockData);
 ```
 
 
@@ -137,8 +137,6 @@ PluginMocker.data = mockData;
 ### 模拟失败
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   GeoPlugin : {
@@ -155,7 +153,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
+mutants.plugin.setMockData(mockData);
 ```
 
 
