@@ -4,10 +4,11 @@
 
 
 
-## 安装
+## 获取实例
 
-```
-npm install chanjet-plugin-auth
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.auth;
 ```
 
 
@@ -85,14 +86,11 @@ npm install chanjet-plugin-auth
 
 ```javascript
 //加载插件
-import AuthPlugin from 'chanjet-plugin-auth'
-
-//初始化  
-let plugin = new AuthPlugin();
+const plugin = mutants.plugin.auth;
 
 
 /********** 获取企业信息 **********/
-this.authPlugin.getConfig( (rs) => {
+plugin.getConfig( (rs) => {
 
   if(rs.resultCode == 0){//成功
     console.log(rs.body.data);
@@ -103,7 +101,7 @@ this.authPlugin.getConfig( (rs) => {
 
 
 /********** 获取authCode **********/
-this.authPlugin.getAuthCode( (rs) => {
+plugin.getAuthCode( (rs) => {
 
   if(rs.resultCode == 0){//成功
     console.log(rs.body.data);
@@ -111,7 +109,6 @@ this.authPlugin.getAuthCode( (rs) => {
   }
 
 });
-
 
 ```
 
