@@ -1,16 +1,21 @@
-# 预览API `chanjet-plugin-peview`
+#预览API `chanjet-plugin-peview`
 
-提供预览功能 , 目前提供图片预览, 后续可能支持其他文件预览.
+在mutants框架中, 提供预览功能 , 目前提供图片预览, 后续可能支持其他文件预览.
 
 目前支持chanjet平台 , 后期增加微信.
 
+**不能脱离mutants框架单独使用.**
 
 
-## 安装
 
+## 获取实例
+
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.preview;
 ```
-npm install chanjet-plugin-preview
-```
+
+
 
 
 
@@ -18,7 +23,7 @@ npm install chanjet-plugin-preview
 
 
 
-1. #### previewImg
+1. #### previewImg 预览图片
 
    ##### 参数
 
@@ -44,9 +49,8 @@ npm install chanjet-plugin-preview
 ## 用法
 
 ```javascript
-import PreviewPlugin from 'chanjet-plugin-preview'
-
-let plugin = new PreviewPlugin();
+//获取插件实例
+const plugin = mutants.plugin.preview;
 
 //定义调用参数
 const options = {
@@ -55,7 +59,6 @@ const options = {
      'http://bbs.zgwg.com.cn/UploadFile/2009-4/200941820512789561.jpg'
    ],
    firstIndex : 0,
-   canDelete : 1
   
 };
 
@@ -115,15 +118,15 @@ plugin.previewImg(options , callback , requestId);
 
 ## mock数据
 
-在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `mutants.plugin.setMockData` 来设置mock数据.
+
+具体参考如下:
 
 
 
 ### 模拟成功
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   PreviewPlugin : {
@@ -132,10 +135,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
-  
-  
-  
+mutants.plugin.setMockData(mockData);
 ```
 
 
@@ -143,8 +143,6 @@ PluginMocker.data = mockData;
 ### 模拟失败
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   PreviewPlugin : {
@@ -153,7 +151,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
+mutants.plugin.setMockData(mockData);
 ```
 
 
