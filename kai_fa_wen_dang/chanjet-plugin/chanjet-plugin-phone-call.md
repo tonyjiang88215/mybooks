@@ -1,20 +1,25 @@
 # 电话API  `chanjet-plugin-phone-call`
 
-提供电话的api , 目前支持chanjet平台, 后期增加微信支持.
+在mutants框架中, 提供电话的api , 目前支持chanjet平台, 后期增加微信支持.
+
+**不能脱离mutants框架单独使用.**
 
 
 
-### 安装
+## 获取实例
 
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.phone;
 ```
-npm install chanjet-plugin-phone-call
-```
+
+
 
 
 
 ## API
 
-1. #### call 读取短信
+1. #### call 打电话
 
    ##### 参数
 
@@ -26,11 +31,10 @@ npm install chanjet-plugin-phone-call
 ## 用法
 
 ```javascript
-//加载插件
-import SMSPlugin from 'chanjet-plugin-phone-call'
+//获取插件实例
+const plugin = mutants.plugin.phone;
 
-//初始化  
-let plugin = new PhoneCallPlugin();
+
 
 
 /************** 打电话 **************/
@@ -48,22 +52,21 @@ const phoneCallCallback = (rs) => {
 
 //调用读取短信api
 plugin.call(phoneNo , phoneCallCallback);
-
 ```
 
 
 
 ## mock数据
 
-在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `mutants.plugin.setMockData` 来设置mock数据.
+
+具体参考如下:
 
 
 
 ### 模拟成功
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   PhoneCallPlugin: {
@@ -75,8 +78,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
-
+mutants.plugin.setMockData(mockData);
 ```
 
 
@@ -84,8 +86,6 @@ PluginMocker.data = mockData;
 ### 模拟失败
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   PhoneCallPlugin: {
@@ -98,7 +98,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
+mutants.plugin.setMockData(mockData);
 ```
 
 
