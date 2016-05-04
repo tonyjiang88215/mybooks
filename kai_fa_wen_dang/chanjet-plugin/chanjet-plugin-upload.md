@@ -1,14 +1,19 @@
 # 上传API `chanjet-plugin-upload`
 
-提供图片和文件上传功能 , 目前支持chanjet平台 , 后期增加微信.
+在mutants框架中, 提供图片和文件上传功能 , 目前支持chanjet平台 , 后期增加微信.
+
+**不能脱离mutants框架单独使用.**
 
 
 
-## 安装
+## 获取实例
 
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.upload;
 ```
-npm install chanjet-plugin-upload
-```
+
+
 
 
 
@@ -16,7 +21,7 @@ npm install chanjet-plugin-upload
 
 
 
-1. #### uploadImg
+1. #### uploadImg 上传图片
 
    ##### 参数
 
@@ -33,9 +38,9 @@ npm install chanjet-plugin-upload
 ## 用法
 
 ```javascript
-import UploadPlugin from 'chanjet-plugin-upload'
+//获取插件实例
+const plugin = mutants.plugin.upload;
 
-let plugin = new UploadPlugin();
 
 //定义调用参数
 const uploadImgArray = [
@@ -105,15 +110,17 @@ plugin.uploadImg(imgList , callback , requestId);
 
 ## mock数据
 
-在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `mutants.plugin.setMockData` 来设置mock数据.
+
+具体参考如下:
+
+
 
 
 
 ### 模拟成功
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   UploadPlugin : {
@@ -138,10 +145,7 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
-  
-  
-  
+mutants.plugin.setMockData(mockData);
 ```
 
 
@@ -149,8 +153,6 @@ PluginMocker.data = mockData;
 ### 模拟失败
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 const mockData = {
   //mock数据中,键名为插件的类名
   UploadPlugin : {
@@ -164,6 +166,6 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
+mutants.plugin.setMockData(mockData);
 ```
 
