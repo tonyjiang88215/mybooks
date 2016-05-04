@@ -1,14 +1,19 @@
 # 语音识别API `chanjet-plugin-speech-reco`
 
-提供语音转换文字功能.
+在mutants框架中,  提供语音转换文字功能.
+
+**不能脱离mutants框架单独使用.**
 
 
 
-## 安装
+## 获取实例
 
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.speechReco;
 ```
-npm install chanjet-plugin-speech-reco
-```
+
+
 
 
 
@@ -60,8 +65,7 @@ npm install chanjet-plugin-speech-reco
 
    错误码对照表
 
-   
- | 错误码   | 对应错误类型          |
+| 错误码   | 对应错误类型          |
    | :---- | :-------------- |
    | 10001 | 客户端异常：位置错误      |
    | 10002 | 用户未说话           |
@@ -90,16 +94,17 @@ npm install chanjet-plugin-speech-reco
    | 50007 | 录音设备不可用         |
    | 50008 | 启动预处理模块出错       |
    | 50009 | 设置的识别属性无效       |
-  
+
+
    
-   
+
 
 ## 用法
 
 ```javascript
-import SpeechRecoPlugin from 'chanjet-plugin-speech-reco'
+//获取插件实例
+const plugin = mutants.plugin.speechReco;
 
-let plugin = new SpeechRecoPlugin();
 
 //识别开始
 plugin.onStart( () => {
@@ -143,7 +148,6 @@ plugin.stop();
 
 //取消识别
 plugin.cancel();
-
 ```
 
 
@@ -152,15 +156,15 @@ plugin.cancel();
 
 ## mock数据
 
-在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `chanjet-plugin` 提供的 `PluginMocker`来设置mock数据.
+在浏览器环境中,可以通过mock数据来模拟返回结果 , 可以使用 `mutants.plugin.setMockData` 来设置mock数据.
+
+具体参考如下:
 
 
 
 ### 模拟成功
 
 ```javascript
-import {PluginMocker} from 'chanjet-plugin-base';
-
 /**
 语音识别的mock比较特殊,由于存在过程,所以可以模拟用户说话的时间, 当用户点击停止时,还是会根据status进行返回结果.
 **/
@@ -176,8 +180,7 @@ const mockData = {
   }
 
 //设置mock数据
-PluginMocker.data = mockData;
-
+mutants.plugin.setMockData(mockData);
 ```
 
 
@@ -198,5 +201,5 @@ const mockData = {
 }
 
 //设置mock数据
-PluginMocker.data = mockData;
+mutants.plugin.setMockData(mockData);
 ```
