@@ -1,14 +1,19 @@
 # 读取相册API `chanjet-plgin-choose-photo`
 
-提供从相册中选择照片的功能 , 目前支持chanjet平台, 后期增加微信.
+在mutants框架中, 提供从相册中选择照片的功能 , 目前支持chanjet平台, 后期增加微信.
+
+**不能脱离mutants框架单独使用.**
 
 
 
-## 安装
+## 获取实例
 
+```javascript
+//通过mutants来获取插件实例
+const plugin = mutants.plugin.choosePhoto;
 ```
-npm install chanjet-plugin-choose-photo
-```
+
+
 
 
 
@@ -16,7 +21,7 @@ npm install chanjet-plugin-choose-photo
 
 
 
-1. #### choosePhoto
+1. #### choosePhoto 选择照片
 
 ##### 参数
 
@@ -33,9 +38,8 @@ npm install chanjet-plugin-choose-photo
 ## 用法
 
 ```javascript
-import ChoosePhotoPlugin from 'chanjet-plugin-choose-photo'
-
-let plugin = new ChoosePhotoPlugin();
+//获取插件实例
+const plugin = mutants.plugin.choosePhoto;
 
 //定义调用参数
 const options = {
