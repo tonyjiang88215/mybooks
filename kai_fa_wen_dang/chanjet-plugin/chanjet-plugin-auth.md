@@ -1,6 +1,8 @@
 # 认证API `chanjet-plugin-auth`
 
-提供认证,信息查询相关api , 目前支持chanjet平台.
+在mutants框架中, 提供认证,信息查询相关api , 目前支持chanjet平台.
+
+**不能脱离mutants框架单独使用.**
 
 
 
