@@ -62,7 +62,7 @@ const plugin = mutants.plugin.auth;
 
    ​
 
-2. #### getAuthCode 
+2. #### getAuthCode 获取认证code
 
    ##### 返回值
 
